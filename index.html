@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Last-Minute Study Planner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <h1>📚 Last-Minute Study Planner</h1>
+            <p class="subtitle">Plan your studies, ace your exams!</p>
+        </header>
+
+        <!-- Motivational Quote Section -->
+        <section class="quote-section">
+            <div class="quote-card">
+                <p id="daily-quote" class="quote-text">Loading inspiration...</p>
+                <p id="quote-author" class="quote-author">— Anonymous</p>
+            </div>
+        </section>
+
+        <!-- Main Content Grid -->
+        <div class="content-grid">
+            <!-- LEFT COLUMN: Subject Management & Progress -->
+            <div class="left-column">
+                <!-- Subject Management Section -->
+                <section class="section subject-management">
+                    <h2 class="section-title">📖 Add Subject</h2>
+                    <div class="form-group">
+                        <input 
+                            type="text" 
+                            id="subject-name" 
+                            placeholder="Subject name (e.g., Mathematics, History)" 
+                            class="input-field"
+                        >
+                    </div>
+                    <div class="form-group">
+                        <label for="exam-date" class="label">Exam Date:</label>
+                        <input 
+                            type="date" 
+                            id="exam-date" 
+                            class="input-field"
+                        >
+                    </div>
+                    <div class="form-group">
+                        <label for="priority" class="label">Priority:</label>
+                        <select id="priority" class="input-field">
+                            <option value="Low">Low</option>
+                            <option value="Medium" selected>Medium</option>
+                            <option value="High">High</option>
+                        </select>
+                    </div>
+                    <button id="add-subject-btn" class="btn btn-primary">Add Subject</button>
+                </section>
+
+                <!-- Subjects List Section -->
+                <section class="section subjects-list">
+                    <h2 class="section-title">📝 Your Subjects</h2>
+                    <div id="subjects-container" class="subjects-container">
+                        <p class="empty-state">No subjects added yet. Start by adding your first subject!</p>
+                    </div>
+                </section>
+
+                <!-- Pomodoro Sessions Stats Section -->
+                <section class="section pomodoro-stats">
+                    <h2 class="section-title">🍅 Pomodoro Stats</h2>
+                    <div id="pomodoro-stats-container" class="pomodoro-stats-container">
+                        <p class="empty-state">Start Pomodoro sessions to track your progress!</p>
+                    </div>
+                </section>
+
+                <!-- Progress Tracking Section -->
+                <section class="section progress-section">
+                    <h2 class="section-title">📊 Overall Progress</h2>
+                    <div class="progress-info">
+                        <div class="progress-bar-container">
+                            <div id="progress-bar" class="progress-bar"></div>
+                        </div>
+                        <div class="progress-stats">
+                            <p id="progress-text" class="progress-text">0 / 0 tasks completed</p>
+                            <p id="progress-percentage" class="progress-percentage">0%</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- RIGHT COLUMN: Study Plan & Today's Tasks -->
+            <div class="right-column">
+                <!-- Study Plan Generator Section -->
+                <section class="section study-plan">
+                    <div class="section-header">
+                        <h2 class="section-title">📅 Study Plan</h2>
+                        <button id="generate-plan-btn" class="btn btn-secondary btn-small">Generate</button>
+                    </div>
+                    <div id="study-plan-container" class="study-plan-container">
+                        <p class="empty-state">Add subjects and click "Generate" to create your study plan!</p>
+                    </div>
+                </section>
+
+                <!-- Today's Tasks Section -->
+                <section class="section todays-tasks">
+                    <h2 class="section-title">✓ Today's Tasks</h2>
+                    <div id="todays-tasks-container" class="tasks-container">
+                        <p class="empty-state">No tasks for today. Add subjects to get started!</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
